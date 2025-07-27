@@ -1,0 +1,283 @@
+@import url("https://fonts.googleapis.com/css2?family=Domine:wght@400..700&display=swap");
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+header {
+  position: relative;
+  background-color: #467fb4;
+  color: white;
+  /* padding: 20px; */
+  text-align: center;
+}
+header img {
+  width: 100%;
+  height: auto;
+}
+header h1 {
+  font-family: "Domine", serif;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2em;
+  background-color: rgba(0, 0, 0, 0.343);
+  padding: 20px 10px;
+  border-radius: 5px;
+}
+header p {
+  font-family: "Domine", serif;
+  font-size: 1.2em;
+  color: #f0f0f0;
+  font-weight: bold;
+  padding: 8px 0 2rem 0;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+main {
+  /* padding: 20px; */
+  /* max-width: 800px; */
+  margin: auto;
+}
+.container {
+  background-color: #ffffff;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+fieldset {
+  border: 2px solid #467fb4;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+fieldset legend {
+  font-family: "Domine", serif;
+  font-size: 1.5em;
+  color: #467fb4;
+  margin-bottom: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+fieldset img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+fieldset p {
+  font-family: "Domine", serif;
+  font-size: 0.8em;
+  color: #224f6c;
+  margin: 5px 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+fieldset h2 {
+  font-family: "Domine", serif;
+  font-size: 1.5em;
+  color: #467fb4;
+  margin-bottom: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+fieldset div {
+  display: flex;
+  align-items: center; /* Align vertically center */
+  justify-content: space-between; /* Push label and input apart */
+  margin-bottom: 1rem;
+}
+
+div label {
+  width: 40%; /* Adjust label width */
+  font-weight: bold;
+  margin-right: 10px;
+  font-family: "Domine", serif;
+  font-size: 1em;
+  color: #224f6c;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: right; /* Align label text to the right */
+  padding-right: 10px; /* Add some space between label and input */
+  flex-shrink: 0; /* Prevent label from shrinking */
+  /* Ensure label doesn't shrink */
+}
+
+select,
+input[type="number"],
+input[type="text"] {
+  width: 55%; /* Input width fits beside label */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+  font-family: "Domine", serif;
+  color: #224f6c;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  flex-grow: 1; /* Allow input to grow */
+  flex-shrink: 1; /* Allow input to shrink if needed */
+  /* Ensure input doesn't shrink */
+}
+
+button {
+  padding: 10px;
+  background-color: #467fb4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+
+  font-family: "Domine", serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+  width: 100%; /* Full width button */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Center text in button */
+  display: block; /* Make button a block element */
+  margin: 0 auto; /* Center button horizontally */
+  max-width: 200px; /* Limit button width */
+  margin-top: 20px; /* Add space above button */
+  margin-bottom: 20px; /* Add space below button */
+}
+button:hover {
+  background-color: #1862a3;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.result {
+  display: none; /* Keep hidden by default; show with JS when needed */
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  text-align: center;
+  font-family: "Domine", serif;
+  font-size: 1em;
+  color: #224f6c;
+  border: 2px solid #467fb4;
+  margin-bottom: 20px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.result h2 {
+  font-family: "Domine", serif;
+  font-size: 1.5em;
+  color: #467fb4;
+  margin-bottom: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.result ul {
+  list-style-type: none;
+  padding: 0;
+}
+.result p {
+  font-family: "Domine", serif;
+  font-size: 0.6em;
+  color: #224f6c;
+  margin: 10px 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+#downloadBtn {
+  padding: 10px;
+  background-color: #467fb4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  margin-top: 10px;
+}
+#downloadBtn:hover {
+  background-color: #1862a3;
+}
+.result-custom {
+  display: none; /* Keep hidden by default; show with JS when needed */
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  text-align: center;
+  font-family: "Domine", serif;
+  font-size: 1em;
+  color: #224f6c;
+  border: 2px solid #467fb4;
+  margin-bottom: 20px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.result-custom h2 {
+  font-family: "Domine", serif;
+  font-size: 1.5em;
+  color: #467fb4;
+  margin-bottom: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+/* Phone screen Styles */
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.5em;
+  }
+
+  .container {
+    padding: 10px;
+  }
+  form {
+    gap: 10px;
+  }
+  button,
+  #downloadBtn {
+    font-size: 0.9em;
+  }
+}
+@media (max-width: 400px) {
+  header h1 {
+    font-size: 1.2em;
+  }
+  fieldset div {
+    flex-direction: column; /* Stack label and input vertically */
+    align-items: flex-start; /* Align items to the start */
+  }
+  div label {
+    width: 100%; /* Full width label */
+    text-align: left; /* Align label text to the left */
+    margin-bottom: 5px; /* Add space below label */
+  }
+  select,
+  input[type="number"],
+  input[type="text"] {
+    width: 100%; /* Full width input */
+  }
+}
